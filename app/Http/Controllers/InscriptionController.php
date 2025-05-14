@@ -13,7 +13,7 @@ class InscriptionController extends Controller
     public function inscription(Request $request)
     {
         $utilisateurDonnee = $request->validate([
-            'nom' => ['required', 'string', 'min:2', 'max:255'],
+            'name' => ['required', 'string', 'min:2', 'max:255'],
             'prenom' => ['required', 'string', 'min:2', 'max:255'],
             'telephone' => ['required', 'string', 'unique:users,telephone'],
             'email' => ['required', 'email', 'unique:users,email'],
@@ -21,7 +21,7 @@ class InscriptionController extends Controller
 
         ]);
         $utilisateurs = User::create([
-            'nom' => $utilisateurDonnee['nom'],
+            'name' => $utilisateurDonnee['name'],
             'prenom' => $utilisateurDonnee['prenom'],
             'telephone' => $utilisateurDonnee['telephone'],
             'email' => $utilisateurDonnee['email'],
