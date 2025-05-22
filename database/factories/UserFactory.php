@@ -26,8 +26,8 @@ class UserFactory extends Factory
         return [
             'name' => 'Gueye',
             'prenom' => 'Soda',
-            'email' => 'soda@gmail.com',
-            'telephone' => '780000000',
+            'email' => 'gueyesoda@gmail.com',
+            'telephone' => '783642500',
             'role' => 'admin',
             'email_verified_at' => now(),
             'password' => static::$password ??= Hash::make('passer123'),
