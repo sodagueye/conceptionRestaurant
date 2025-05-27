@@ -20,15 +20,18 @@ class RoleResource extends Resource
     protected static ?string $model = Role::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
-
+    protected static ?string $navigationGroup ='Settings';
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
                 TextInput::Make('name')
                 ->minLength(2)
-                ->maxLength(255)
-            ]);
+                ->maxLength(255),
+            //     Select::make('permission')
+            //     ->multiple()
+            //     ->relationship('technologies','name')
+             ]);
     }
 
     public static function table(Table $table): Table
