@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('prenom');
             $table->string('email')->unique();
             $table->string('telephone')->unique();
-            $table->enum('role', ['personnel_restaurant','admin','client' ,'livreur']);
+            // $table->enum('role', ['personnel_restaurant','admin','client' ,'livreur']);
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
